@@ -10,7 +10,7 @@
 
 ```bash
 sudo apt update
-sudo apt install python python-pip python3-pip openjdk-8-jdk git gitg vim vim-gnome exuberant-ctags build-essential gcc-multilib chromium-browser htop goldendict kolourpaint4 gimp php apache2 steam mplayer vlc evince nodejs npm cheese viewnior gedit tree openssh-server nmap screenfetch gnome-tweak-tool -y
+sudo apt install python python-pip python3-pip openjdk-8-jdk git gitg vim vim-gnome exuberant-ctags build-essential gcc-multilib chromium-browser htop goldendict kolourpaint4 gimp php apache2 steam mplayer flashplugin-installer vlc evince nodejs npm cheese viewnior gedit tree openssh-server nmap screenfetch gnome-tweak-tool -y
 sudo apt dist-upgrade -y
 sudo apt autoremove -y
 ```
@@ -43,7 +43,7 @@ Some other packages may be needed `gitk chmsee compizconfig-settings-manager pla
 
 [npm and nodejs version](https://gist.github.com/YeXiaoRain/62282c1f5839922b875fb019de180f67)
 
-[obs](https://obsproject.com/forum/threads/ubuntu-ppa-installation-instructions.16495/)
+[obs](https://obsproject.com/forum/threads/ubuntu-ppa-installation-instructions.16495/) don't install ffmpeg in ubuntu 18
 
 [wakatime](https://wakatime.com/editors)
 
