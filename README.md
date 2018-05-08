@@ -1,4 +1,4 @@
-# install ubuntu 17.10
+# install ubuntu 18.04 bionic ~17.10~
 
 0. [DownLoad](https://www.ubuntu.com/desktop/1710) and install
 - Partition:SSD(32G /, 8G swap, 88G /home) HDD(/data) [TODO learn lvm](https://gist.github.com/YeXiaoRain/950fd5592f48e67a6e7ba932594b80a6)
