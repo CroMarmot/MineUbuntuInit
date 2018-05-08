@@ -15,7 +15,7 @@ sudo apt dist-upgrade -y
 sudo apt autoremove -y
 ```
 
-Some other packages may be needed `gitk chmsee numix-icon-theme-circle numix-gtk-theme compizconfig-settings-manager playonlinux`
+Some other packages may be needed `gitk chmsee compizconfig-settings-manager playonlinux`
 
 3. config
 
@@ -43,6 +43,10 @@ Some other packages may be needed `gitk chmsee numix-icon-theme-circle numix-gtk
 [obs](https://obsproject.com/forum/threads/ubuntu-ppa-installation-instructions.16495/)
 
 [wakatime](https://wakatime.com/editors)
+
+[numix theme](https://itsfoss.com/install-numix-ubuntu/)
+
+unity
 
 ## idea/webstorm/androidstudio
 
