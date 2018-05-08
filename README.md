@@ -10,7 +10,7 @@
 
 ```bash
 sudo apt update
-sudo apt install python python-pip python3-pip git gitg vim vim-gnome exuberant-ctags build-essential gcc-multilib chromium-browser htop goldendict kolourpaint4 gimp php apache2 steam mplayer vlc evince nodejs npm cheese viewnior gedit tree openssh-server nmap screenfetch gnome-tweak-tool -y
+sudo apt install python python-pip python3-pip openjdk-8-jdk mysql-server mysql-workbench git gitg vim vim-gnome exuberant-ctags build-essential gcc-multilib chromium-browser htop goldendict kolourpaint4 gimp php apache2 steam mplayer vlc evince nodejs npm cheese viewnior gedit tree openssh-server nmap screenfetch gnome-tweak-tool -y
 sudo apt dist-upgrade -y
 sudo apt autoremove -y
 ```
