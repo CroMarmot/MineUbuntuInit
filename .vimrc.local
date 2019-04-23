@@ -1,0 +1,42 @@
+if !exists('g:override_spf13_bundles') && filereadable(expand("~/.vim/bundle/vim-colors/colors/molokai.vim"))
+    colorscheme molokai             " Load a colorscheme
+    let g:airline_theme = 'molokai'
+endif
+
+let g:syntastic_cpp_compiler_options = ' -std=c++17'
+
+set hlsearch
+
+autocmd VimEnter * set nospell
+set wrap
+set rnu
+
+hi Normal ctermbg=none
+hi CursorLine   cterm=NONE ctermbg=white ctermfg=black  guibg=#004488 guifg=white
+set cursorcolumn                  " Highlight current line
+hi CursorColumn   cterm=NONE ctermbg=darkgray ctermfg=white guibg=#004488 guifg=white
+
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+
+let g:AutoPairs = {}
+
+function CompileByFileType()
+  if &filetype == "cpp"
+    !clang++ -o "%<" "%" -std=gnu++17 -O2 -g -Wall -Werror -Wcomma
+    "!g++ -o "%<" "%" -std=gnu++14 -O2 -g -Wall
+  elseif &filetype == "c"
+    !gcc -o "%<" "%" -O2 -g
+  elseif &filetype == "python"
+    !python3 "%"
+  elseif &filetype == "go"
+    !go run "%"
+  else
+    echo "UNKNOWN FILETYPE : &filetype"
+  endif
+endfunction
+
+nnoremap <F9> :call CompileByFileType() <CR>
+nnoremap <F8> :!gdb "%<"<CR>
