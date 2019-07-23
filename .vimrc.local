@@ -4,6 +4,7 @@ if !exists('g:override_spf13_bundles') && filereadable(expand("~/.vim/bundle/vim
 endif
 
 let g:syntastic_cpp_compiler_options = ' -std=c++17'
+let g:textobj#quote#educate = 0 "https://github.com/spf13/spf13-vim/issues/732
 
 set hlsearch
 
@@ -23,9 +24,22 @@ set expandtab
 
 let g:AutoPairs = {}
 
+Bundle 'tibabit/vim-templates'
+let g:tmpl_author_email="yexiaorain@gmail.com"
+let g:tmpl_license="GPL"
+
+Bundle 'leafgarland/typescript-vim'
+autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
+
+Plugin 'posva/vim-vue'
+" Vue syntax highligting
+autocmd BufNewFile,BufRead *.vue set ft=vue
+autocmd FileType vue syntax sync fromstart
+
 function CompileByFileType()
   if &filetype == "cpp"
-    !clang++ -o "%<" "%" -std=gnu++17 -O2 -g -Wall -Werror -Wcomma
+    "!clang++ -o "%<" "%" -std=gnu++17 -O2 -g -Wall -Wcomma
+    !clang++ -o "%<" "%" -std=gnu++17 -g -Wall -Wcomma
     "!g++ -o "%<" "%" -std=gnu++14 -O2 -g -Wall
   elseif &filetype == "c"
     !gcc -o "%<" "%" -O2 -g
@@ -33,8 +47,10 @@ function CompileByFileType()
     !python3 "%"
   elseif &filetype == "go"
     !go run "%"
+  elseif &filetype == "rust"
+    !rustc "%"
   else
-    echo "UNKNOWN FILETYPE : &filetype"
+    echo "UNKNOWN FILETYPE : "&filetype
   endif
 endfunction
 

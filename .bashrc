@@ -199,7 +199,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-source /home/cromarmot/Tools/bash-wakatime/bash-wakatime.sh
+# source ~/Tools/bash-wakatime/bash-wakatime.sh
 export PATH=$PATH:~/.npm_global/bin
 alias y='python ~/Tools/DICT.py'
 set -o vi
@@ -208,7 +208,12 @@ shopt -s autocd
 export ANDROID_HOME=/data/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/bin
 
+# angular test
+export CHROME_BIN=/usr/bin/chromium-browser
+
 export PATH=$PATH:~/.local/bin
 
 screenfetch
 #curl wttr.in
+
+alias npm='~/.npm_global/bin/npm'
